@@ -12,9 +12,12 @@ secret_number = random.randint(1, 100)
 
 solved = False
 
+guesses = set()
+#this will keep track of number of guesses
+
 while solved == False:
     guess = int(raw_input("Pick a number: "))
-
+    guesses.add(guess)
     if guess > secret_number:
         print "Too high"
 
@@ -22,7 +25,7 @@ while solved == False:
         print "Too low"
 
     else:
-        print "You got it!"
+        print "You got it! You tried {} times.".format(len(guesses)) 
         solved = True
 
 
