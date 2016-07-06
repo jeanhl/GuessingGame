@@ -16,7 +16,7 @@ guesses = set()
 #this will keep track of number of guesses
 
 while not solved:
-    guess = int(raw_input("Pick a number: "))
+    guess = int(raw_input("Pick a number between 1 and 100: "))
     # keeps asking for guesses while not solved; converts to integer
     guesses.add(guess)
     # adds new guess to set of guessed numbers; does not add duplicates
