@@ -15,17 +15,18 @@ solved = False
 guesses = set()
 #this will keep track of number of guesses
 
-while solved == False:
+while not solved:
     guess = int(raw_input("Pick a number: "))
+    # keeps asking for guesses while not solved; converts to integer
     guesses.add(guess)
+    # adds new guess to set of guessed numbers; does not add duplicates
+
     if guess > secret_number:
-        print "Too high"
+        print "Too high."
 
     elif guess < secret_number:
-        print "Too low"
+        print "Too low."
 
     else:
-        print "You got it! You tried {} times.".format(len(guesses)) 
+        print "You got it! You guessed {} numbers.".format(len(guesses)) 
         solved = True
-
-
