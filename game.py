@@ -47,7 +47,7 @@ def guessing_game(HIGH_SCORE):
             solved = True
     # Asking player if they want to play again 
     again = raw_input("Do you want to play again? (Y/N) ")
-    if again == "Y" or "y" or "yes" or "YES":
+    if again == "Y":
         guessing_game(HIGH_SCORE)
     else:
         return
