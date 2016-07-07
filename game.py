@@ -39,13 +39,15 @@ def guessing_game(HIGH_SCORE):
 
         else:
             print "You got it! You guessed {} numbers.".format(len(guesses))
+            # now we will track the high score. 
+            # HIGH SCORE is a global variable because it will reset if stored in the function
             if len(guesses) < HIGH_SCORE:
                 HIGH_SCORE = len(guesses)
                 print "{} is the least amount of numberers guessed!".format(HIGH_SCORE)
             solved = True
-
+    # Asking player if they want to play again 
     again = raw_input("Do you want to play again? (Y/N) ")
-    if again == "Y":
+    if again == "Y" or "y" or "yes" or "YES":
         guessing_game(HIGH_SCORE)
     else:
         return
