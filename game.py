@@ -44,7 +44,7 @@ def guessing_game(min_number,max_number,high_score='max_number+1'):
             solved = True
     # Asking player if they want to play again 
     again = raw_input("Do you want to play again? (Y/N) ")
-    if again == "Y" or again == "y":
+    if lower(again) == "y" :
         guessing_game(min_number,max_number)
     else:
         return
